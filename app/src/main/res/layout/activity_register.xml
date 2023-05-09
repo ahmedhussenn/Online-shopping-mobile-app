@@ -108,7 +108,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputUsername"
         app:layout_constraintTop_toBottomOf="@+id/inputUsername"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintVertical_bias="0.006" />
 
     <EditText
         android:id="@+id/input_job"
@@ -127,10 +127,32 @@
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/inputPassowrd"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/inputPassowrd"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassowrd"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <EditText
+        android:id="@+id/password_recovery_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_pg"
+        android:ems="10"
+        android:hint="Enter password recovery_code"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassowrd"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputPassowrd"
         app:layout_constraintTop_toBottomOf="@+id/inputPassowrd"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintVertical_bias="0.009" />
 
     <TextView
         android:id="@+id/Gender"

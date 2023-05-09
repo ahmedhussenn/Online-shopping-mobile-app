@@ -44,13 +44,21 @@
         android:text="Save Image" />
 
     <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_edit"
+        android:layout_marginTop="148dp"
+        android:onClick="storeImage"
+        android:text="logout" />
+
+    <Button
         android:id="@+id/movebtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/image_edit"
         android:onClick="movetoshowactivty"
         android:text="move to show" />
-
 
 
 </RelativeLayout>

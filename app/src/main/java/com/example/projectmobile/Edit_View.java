@@ -27,6 +27,7 @@ public class Edit_View extends AppCompatActivity {
     private Bitmap Imagetostore;
     String Image_name;
     String Image_desc;
+    String image_id;
 
     db_helper objectDataBaseHandler;
     @Override
@@ -48,8 +49,10 @@ public class Edit_View extends AppCompatActivity {
         System.out.println(Image_desc);
         ImageDetailsEt.setText(Image_name);
         Descriptiontxt.setText(Image_desc);*/
+
         Image_name = getIntent().getStringExtra("passed_name");
         Image_desc = getIntent().getStringExtra("passed_desc");
+        image_id=getIntent().getStringExtra("passed_id");
         byte[] imagebytes=getIntent().getByteArrayExtra("passed_image");
         Bitmap objecbitmap = BitmapFactory.decodeByteArray(imagebytes, 0, imagebytes.length);
     //    Bitmap bitmap = (Bitmap) getIntent().getParcelableExtra("passed_image");
@@ -68,7 +71,7 @@ public class Edit_View extends AppCompatActivity {
                 imageToStoreBitmap.compress(Bitmap.CompressFormat.JPEG, 100, objectByteArrayOutputStream);
 
                 imageinbytes = objectByteArrayOutputStream.toByteArray();
-                objectDataBaseHandler.update_image(Image_name,Image_desc,
+                objectDataBaseHandler.update_image(image_id,Image_name,Image_desc,
                         ImageDetailsEt.getText().toString(),Descriptiontxt.getText().toString(),imageinbytes);
             }
         });
@@ -76,10 +79,10 @@ public class Edit_View extends AppCompatActivity {
 
     public void chooseImage(View objectView) {
         try {
-          Intent objectIntent = new Intent();
+         /* Intent objectIntent = new Intent();
             objectIntent.setType("image/*");
             objectIntent.setAction( Intent.ACTION_GET_CONTENT);
-            startActivityForResult(objectIntent, PICK_IMAGE_Requst);
+            startActivityForResult(objectIntent, PICK_IMAGE_Requst);*/
         } catch (Exception e) {
 
         }

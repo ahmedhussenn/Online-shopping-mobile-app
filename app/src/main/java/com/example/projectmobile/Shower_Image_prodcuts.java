@@ -25,11 +25,13 @@ public class Shower_Image_prodcuts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shower_image_prodcuts);
+        System.out.println("hello 1");
         try{
             objectRecylerView=findViewById(R.id.recview);
             objectDataBaseHandler=new db_helper(this);
 
             ArrayList<ModelClass> x=objectDataBaseHandler.getAllImageData();
+
             objevtrvadatper = new MyAdapter(x);
 
             ImageButton Delete=(ImageButton)findViewById(R.id.delete_btn);
@@ -44,6 +46,7 @@ public class Shower_Image_prodcuts extends AppCompatActivity {
                 public void onItemClick(int postion,String type) {
                    System.out.println(x.get(postion).ImageName);
                    if(type=="delete") {
+                       System.out.println("the deleted item id is "+x.get(postion).product_id);
                        objectDataBaseHandler.delete_image(x.get(postion).ImageName, x.get(postion).Description);
                        x.remove(postion);
                        objevtrvadatper.notifyItemRemoved(postion);
@@ -51,9 +54,13 @@ public class Shower_Image_prodcuts extends AppCompatActivity {
                    }
                     if(type=="edit") {
                         System.out.println("Edit");
-                       Intent intent = new Intent(getApplicationContext(), Edit_View.class);
+                        System.out.println("the Edit item id is "+x.get(postion).product_id);
+
+                        Intent intent = new Intent(getApplicationContext(), Edit_View.class);
                        System.out.println(x.get(postion).Image);
-                       intent.putExtra("passed_name",x.get(postion).ImageName);
+                        intent.putExtra("passed_id",x.get(postion).product_id);
+
+                        intent.putExtra("passed_name",x.get(postion).ImageName);
                        intent.putExtra("passed_desc",x.get(postion).Description);
                          byte[] imageinbytes;
                         Bitmap imageToStoreBitmap = x.get(postion).Image;
@@ -64,6 +71,27 @@ public class Shower_Image_prodcuts extends AppCompatActivity {
                        startActivity(intent);
                        // startActivity(new Intent(this,Edit_View.class));
                     }
+
+                    if(type=="v") {
+                        System.out.println("view");
+                        //  showToast(postion+" clicked");
+                        Intent intent = new Intent(getApplicationContext(), productDetails.class);
+                        System.out.println(x.get(postion).getImage());
+                        intent.putExtra("passed_name",x.get(postion).getImageName());
+                        intent.putExtra("passed_desc",x.get(postion).getDescription());
+                        intent.putExtra("passed_price",x.get(postion).getPrice());
+                        //start
+                        byte[] imageinbytes;
+                        Bitmap imageToStoreBitmap = x.get(postion).getImage();
+                        ByteArrayOutputStream  objectByteArrayOutputStream = new ByteArrayOutputStream();
+                        imageToStoreBitmap.compress(Bitmap.CompressFormat.JPEG, 100, objectByteArrayOutputStream);
+                        imageinbytes = objectByteArrayOutputStream.toByteArray();
+                        intent.putExtra("passed_image", imageinbytes);
+                        //end
+                        startActivity(intent);
+
+                    }
+
                 }
             });
         }

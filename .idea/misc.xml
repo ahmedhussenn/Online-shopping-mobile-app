@@ -3,15 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/drawable/btn_bg.xml" value="0.186" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.272" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/drawable/ic_email.xml" value="0.186" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.186" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/drawable/ic_person_24.xml" value="0.186" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/drawable/ic_security.xml" value="0.186" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/drawable/mood.xml" value="0.2525" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/drawable/qr_code_scanner.xml" value="0.1315" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_cart.xml" value="0.307518115942029" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_edit.xml" value="0.184375" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_edit_quantities_cart.xml" value="0.307518115942029" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_edit_view.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_forgot_password.xml" value="0.22" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_googlemaps.xml" value="0.307518115942029" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_lodin_activty.xml" value="0.35989583333333336" />
-        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_new_password.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_show_image.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_shower_image.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/activity_shower_image_prodcuts.xml" value="0.2753623188405797" />
+        <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/content_new_password.xml" value="0.307518115942029" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/recycle_row.xml" value="0.1" />
         <entry key="..\:/Users/Ahmed Hussien/AndroidStudioProjects/projectmobile/app/src/main/res/layout/single_row.xml" value="0.17426545086119555" />
       </map>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.InputType;
 import android.widget.Button;
 import android.widget.DatePicker;
 
@@ -20,7 +21,7 @@ import java.util.Calendar;
 public class RegisterActivity extends AppCompatActivity {
     Customer_db_helper customer_db_helper;
     String gender="e";
-    String Customername,Customerusername,password,birthdatestring,job;
+    String Customername,Customerusername,password,birthdatestring,job,password_code;
    DatePickerDialog.OnDateSetListener setListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,14 @@ public class RegisterActivity extends AppCompatActivity {
          System.out.println("we are before db _helper customer");
         customer_db_helper=new Customer_db_helper(this);
 
-        TextView Customer_name_field, Customer_username_field,Customer_password_field,Customer_job_field,Customerbirthdate;
+        TextView Customer_name_field, pass_recovery,Customer_username_field,Customer_password_field,Customer_job_field,Customerbirthdate;
         Customer_name_field=(TextView)findViewById(R.id.Customername);
         Customer_username_field=(TextView)findViewById(R.id.inputUsername);
+        pass_recovery=(TextView)findViewById(R.id.password_recovery_code);
+        pass_recovery.setInputType(InputType.TYPE_CLASS_NUMBER );
+
         Customer_password_field=(TextView)findViewById(R.id.inputPassowrd);
+
         Customer_job_field=(TextView)findViewById(R.id.input_job);
         Customerbirthdate=(TextView) findViewById(R.id.Birthdate);
 
@@ -103,6 +108,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Customerusername = Customer_username_field.getText().toString();
                 password = Customer_password_field.getText().toString();
                 job = Customer_job_field.getText().toString();
+                String recover_code=pass_recovery.getText().toString();
 
                 if (Customername.length() == 0 || Customername.length() == 0||password.length()==0) {
                     Toast.makeText(getApplicationContext(), "not all fields is filled", Toast.LENGTH_LONG).show();
@@ -111,7 +117,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "not all fields is filled", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    String return_to_login = customer_db_helper.store_customer_info(Customername, Customerusername, password, gender[0], Customerbirthdate.getText().toString(), job);
+                    String return_to_login = customer_db_helper.store_customer_info(Customername, Customerusername, password, gender[0], Customerbirthdate.getText().toString(), job,recover_code);
                     if (return_to_login == "Succseful") {
                         startActivity(new Intent(getApplicationContext(), LodinActivty.class));
                     } else {
